@@ -1,8 +1,8 @@
-# 📘 STARTER KIT — Cuộc Thi Nhận Diện Giao Thông
+# 📘 STARTER KIT — Cuộc Thi "Phát triển hệ thống nhận diện giao thông"
 
 ## 🚦 Ngày hội Công nghệ Thông tin — BETU 2026
 
-> 📝 **[ĐĂNG KÝ NHÓM TẠI ĐÂY](https://forms.gle/HXa6bXhfoxBKR5KX7)**
+> 📝 **[ĐĂNG KÝ NHÓM TẠI ĐÂY](https://forms.gle/HXa6bXhfoxBKR5KX7)** — ⏰ Thời hạn đăng ký: trước ngày **30/04/2026**
 
 ---
 
