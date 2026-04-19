@@ -48,11 +48,14 @@ streamlit run Demo_App.py
 ## 📊 Dataset
 
 ### Dataset có sẵn (GTSRB)
-- **German Traffic Sign Recognition Benchmark**
-- 43 loại biển báo, ~50.000 ảnh
-- Notebook sẽ tự động tải dataset này
+- **German Traffic Sign Recognition Benchmark** — 43 loại biển báo, ~50.000 ảnh
+- 📥 **Link tải trực tiếp:**
+  - [Training data (~263 MB)](https://sid.erda.dk/public/archives/daaeac0d7ce1152aea9b61d9f1e19370/GTSRB_Final_Training_Images.zip)
+  - [Test data (~84 MB)](https://sid.erda.dk/public/archives/daaeac0d7ce1152aea9b61d9f1e19370/GTSRB_Final_Test_Images.zip)
+  - [Trang chủ GTSRB](https://benchmark.ini.rub.de/gtsrb_news.html)
+- 💡 **Notebook sẽ tự động tải dataset này**, không cần tải thủ công
 
-### Tự thu thập dữ liệu (cộng điểm!)
+### Tự thu thập dữ liệu (cộng 10% điểm!)
 - Chụp ảnh biển báo giao thông tại Bình Dương, TP.HCM
 - Sử dụng [Roboflow](https://roboflow.com/) để gán nhãn (miễn phí)
 - Mỗi loại biển báo cần ít nhất 50 ảnh
