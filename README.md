@@ -16,7 +16,7 @@ Starter_Kit/
 
 ---
 
-## 🚀 Hướng Dẫn Sử Dụng (Từng Bước)
+## 🚀 Hướng Dẫn Sử Dụng
 
 ### Bước 1: Train model trên Google Colab
 
