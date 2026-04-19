@@ -2,6 +2,8 @@
 
 ## 🚦 Ngày hội Công nghệ Thông tin — BETU 2026
 
+> 📝 **[ĐĂNG KÝ NHÓM TẠI ĐÂY](https://docs.google.com/spreadsheets/d/1c0b3DD_M9egsq9ZF5TNW_vxl4-oNKXbJ1_ZDfEwaHLU/edit?gid=0#gid=0)**
+
 ---
 
 ## 📁 Cấu trúc Starter Kit
