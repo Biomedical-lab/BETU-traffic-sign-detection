@@ -99,7 +99,7 @@ streamlit run Demo_App.py
 ## ❓ Hỗ Trợ
 
 Nếu gặp lỗi hoặc cần giúp đỡ:
-- Hỏi trong **Group Zalo cuộc thi**
+- 💬 Tham gia **[Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)** — BETU-traffic-sign-detection
 - Liên hệ **Thầy Nguyên Ba Duy** (Tổ chức)
 - Liên hệ **Lê Văn Xin** (Hỗ trợ)
 
