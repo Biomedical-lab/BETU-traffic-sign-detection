@@ -101,7 +101,7 @@ streamlit run Demo_App.py
 Nếu gặp lỗi hoặc cần giúp đỡ:
 - Hỏi trong **Group Zalo cuộc thi**
 - Liên hệ **Thầy Nguyên Ba Duy** (Tổ chức)
-- Liên hệ **Lê Văn Xin** (phối hợp tổ chức)
+- Liên hệ **Lê Văn Xin** (Hỗ trợ)
 
 ---
 
