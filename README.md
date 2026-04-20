@@ -10,7 +10,7 @@
 | ⏰ Hạn nộp bài | **23/05/2026 (23:59)** |
 | 👨‍🏫 Phụ trách | Thầy Nguyễn Ba Duy |
 | 🤝 Phối hợp | Lê Văn Xin |
-| 👥 Nhóm | 3 – 4 sinh viên |
+| 👥 Nhóm | 2 – 3 sinh viên |
 
 ---
 
@@ -77,7 +77,7 @@ streamlit run Demo_App.py
 
 ### 1. Đối tượng & Hình thức
 - **Đối tượng**: Sinh viên Khoa KT-CN, Trường ĐH KT-KT Bình Dương
-- **Nhóm**: 3 – 4 sinh viên/nhóm
+- **Nhóm**: 2 – 3 sinh viên/nhóm
 - **Thời gian phát triển**: 4 tuần (26/04 – 23/05/2026)
 - **Ngày thi**: 29/05/2026 – Demo trực tiếp trước Ban giám khảo
 
