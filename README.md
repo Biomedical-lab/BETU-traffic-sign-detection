@@ -100,9 +100,8 @@
 |-----------|-------|
 | 🆔 Tracking xe | Gán ID từng xe, theo dõi qua nhiều frame (SORT/DeepSORT) |
 | 📍 Đếm xe qua vạch | Vẽ counting line, đếm xe đi qua không trùng |
-| 🚧 Phân làn | Đếm xe theo từng làn đường |
-| 🗺️ Heatmap | Bản đồ nhiệt mật độ giao thông |
-| 🇻🇳 Fine-tune model | Train thêm trên dữ liệu giao thông VN (VisDrone, tự quay) |
+| ️ Heatmap | Bản đồ nhiệt mật độ giao thông |
+| 🕐 Lịch sử thống kê | Lưu lại lịch sử đếm xe, so sánh theo thời gian |
 
 ---
 
@@ -170,10 +169,10 @@ streamlit run Demo_App.py
 
 ### 4. Yêu cầu khuyến khích (cộng điểm)
 - 🎯 Tracking xe qua nhiều frame (SORT/DeepSORT)
-- 📊 Dashboard thống kê, biểu đồ, heatmap
-- 🚧 Phân làn xe, đếm theo hướng
+- 📊 Dashboard thống kê, biểu đồ số xe theo thời gian
+- � Đếm xe qua vạch (counting line), đếm không trùng
 - 🔔 Cảnh báo khi mật độ giao thông cao
-- 🇻🇳 Fine-tune model trên dữ liệu giao thông VN
+- 🗺️ Heatmap mật độ, lịch sử thống kê
 
 ### 5. Tiêu chí chấm điểm
 
