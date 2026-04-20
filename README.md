@@ -76,7 +76,37 @@
 
 ---
 
-## 📁 Starter Kit
+## � GỢI Ý PHÁT TRIỂN SÁNG TẠO (15% điểm)
+
+> Starter Kit chỉ là **điểm bắt đầu**. Các nhóm cần phát triển thêm tính năng để tạo sự khác biệt!
+
+### ⭐ Mức 1 — Dễ (nên làm)
+| Tính năng | Mô tả |
+|-----------|-------|
+| 🎨 Giao diện đẹp | Thêm CSS, màu sắc theo loại xe, animation |
+| 📊 Hiển thị thống kê | Bảng tổng hợp số xe theo loại |
+| 📸 Chụp ảnh | Nút chụp & lưu kết quả nhận diện |
+
+### ⭐⭐ Mức 2 — Trung bình (nổi bật)
+| Tính năng | Mô tả |
+|-----------|-------|
+| 📈 Biểu đồ real-time | Chart số xe theo thời gian (dùng `st.line_chart`) |
+| 🔔 Cảnh báo | Thông báo khi số xe vượt ngưỡng |
+| 📹 Ghi video | Lưu lại video đã detect để xem lại |
+| 🎯 Chọn vùng detect | Cho phép vẽ vùng quan tâm (ROI) trên khung hình |
+
+### ⭐⭐⭐ Mức 3 — Nâng cao (điểm cao nhất)
+| Tính năng | Mô tả |
+|-----------|-------|
+| 🆔 Tracking xe | Gán ID từng xe, theo dõi qua nhiều frame (SORT/DeepSORT) |
+| 📍 Đếm xe qua vạch | Vẽ counting line, đếm xe đi qua không trùng |
+| 🚧 Phân làn | Đếm xe theo từng làn đường |
+| 🗺️ Heatmap | Bản đồ nhiệt mật độ giao thông |
+| 🇻🇳 Fine-tune model | Train thêm trên dữ liệu giao thông VN (VisDrone, tự quay) |
+
+---
+
+## �📁 Starter Kit
 
 ```
 Starter_Kit/
