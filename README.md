@@ -278,7 +278,7 @@ Báo cáo 3–5 trang, bao gồm:
 ### 9. Liên Hệ & Hỗ Trợ
 
 Mọi thắc mắc về đề bài, kỹ thuật, hoặc nộp bài, vui lòng liên hệ:
-- 👨‍🏫 **Thầy Nguyên Ba Duy** (phụ trách kỹ thuật)
+- 👨‍🏫 **Thầy Nguyễn Ba Duy** (phụ trách kỹ thuật)
 - 🤝 **Lê Văn Xin** (phối hợp tổ chức)
 - 💬 **[Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)** — BETU-traffic-sign-detection
 
