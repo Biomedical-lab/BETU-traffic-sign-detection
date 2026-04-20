@@ -44,7 +44,7 @@
 ## 🗺️ HÀNH TRÌNH SINH VIÊN: TỪ ĐĂNG KÝ → DỰ THI
 
 ### Bước 1: 📝 Đăng ký (trước 30/04)
-- Lập nhóm 2-3 SV → đăng ký qua Google Form
+- Lập nhóm 2-3 SV → **[đăng ký tại đây](https://forms.gle/HXa6bXhfoxBKR5KX7)**
 - Tham gia [Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)
 
 ### Bước 2: 📥 Nhận Starter Kit
