@@ -299,7 +299,7 @@ if uploaded:
 
 - 💬 **[Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)**
 - 👨‍🏫 **Thầy Nguyễn Ba Duy** (Chịu trách nhiệm chính)
-- 🤝 **Lê Văn Xin** (phối hợp)
+- 🤝 **Lê Văn Xin** (Phối hợp)
 
 ---
 
