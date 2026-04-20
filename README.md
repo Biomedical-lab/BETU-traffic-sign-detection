@@ -2,7 +2,7 @@
 
 ### Ngày hội Công nghệ Thông tin — BETU 2026
 
-> 📝 **[ĐĂNG KÝ NHÓM TẠI ĐÂY](https://forms.gle/HXa6bXhfoxBKR5KX7)** — ⏰ Hạn đăng ký: **30/04/2026**
+> 📝 **[ĐĂNG KÝ NHÓM TẠI ĐÂY](https://docs.google.com/forms/d/e/1FAIpQLSe-N0hmLiP9FC74LOCokDVVs7C-vysAd_o6tz7FKZl8ub_dDA/viewform)** — ⏰ Hạn đăng ký: **30/04/2026**
 
 | Thông tin | Chi tiết |
 |-----------|----------|
@@ -44,7 +44,7 @@
 ## 🗺️ HÀNH TRÌNH SINH VIÊN: TỪ ĐĂNG KÝ → DỰ THI
 
 ### Bước 1: 📝 Đăng ký (trước 30/04)
-- Lập nhóm 2-3 SV → **[đăng ký tại đây](https://forms.gle/HXa6bXhfoxBKR5KX7)**
+- Lập nhóm 2-3 SV → **[đăng ký tại đây](https://docs.google.com/forms/d/e/1FAIpQLSe-N0hmLiP9FC74LOCokDVVs7C-vysAd_o6tz7FKZl8ub_dDA/viewform)**
 - Tham gia [Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)
 
 ### Bước 2: 📥 Nhận Starter Kit
