@@ -47,8 +47,8 @@
 - Lập nhóm 2-3 SV → đăng ký qua Google Form
 - Tham gia [Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)
 
-### Bước 2: 📥 Nhận Starter Kit (26/04 – 02/05)
-- Tải Starter Kit từ GitHub
+### Bước 2: 📥 Nhận Starter Kit
+- Tải Starter Kit từ GitHub (có sẵn)
 - Cài thư viện: `pip install -r requirements.txt`
 - Chạy thử: `python count_vehicles.py` → xem code mẫu hoạt động
 
