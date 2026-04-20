@@ -96,19 +96,23 @@ with st.sidebar:
     st.header("⚙️ Cài đặt")
     source = st.radio(
         "📹 Nguồn video:",
-        ["📷 Webcam", "🎥 Upload Video", "🖼️ Upload Ảnh"],
+        ["📱 Camera Điện thoại (DroidCam)", "🎥 Upload Video", "🖼️ Upload Ảnh"],
         index=2
     )
     conf_threshold = st.slider("🎯 Ngưỡng tin cậy", 0.1, 0.9, 0.3, 0.05)
 
     st.divider()
-    st.header("📊 Hướng dẫn")
+    st.header("📱 Kết nối DroidCam")
     st.markdown("""
-    1. Chọn **nguồn video** ở trên
-    2. Điều chỉnh **ngưỡng tin cậy**
-    3. Xem kết quả nhận diện
-    
-    **Các loại xe nhận diện:**
+    1. Cài **DroidCam** trên điện thoại
+    2. Cài **DroidCam Client** trên laptop
+    3. Kết nối **cùng WiFi**
+    4. Chọn nguồn camera ở trên
+    """)
+
+    st.divider()
+    st.header("📊 Loại xe nhận diện")
+    st.markdown("""
     - 🟢 Ô tô (car)
     - 🔴 Xe máy (motorcycle)
     - 🔵 Xe buýt (bus)
@@ -178,19 +182,26 @@ elif source == "🎥 Upload Video":
 
         cap.release()
 
-elif source == "📷 Webcam":
-    st.info("🎥 Nhấn **Bắt đầu** để mở webcam và nhận diện phương tiện real-time.")
-    st.warning("⚠️ **Lưu ý:** Webcam cần quyền truy cập camera từ trình duyệt.")
+elif source == "📱 Camera Điện thoại (DroidCam)":
+    st.info("📱 Kết nối điện thoại qua DroidCam để nhận diện phương tiện real-time.")
 
+    cam_method = st.radio("Cách kết nối:", ["DroidCam Client (camera điện thoại)", "IP Camera (nhập URL)"])
+
+    if cam_method == "IP Camera (nhập URL)":
+        ip_url = st.text_input("Nhập URL camera:", "http://192.168.1.x:4747/video")
+    
     col1, col2 = st.columns(2)
     start = col1.button("▶️ Bắt đầu", type="primary")
     stop = col2.button("⏹️ Dừng")
 
     if start:
-        cap = cv2.VideoCapture(0)
+        if cam_method == "IP Camera (nhập URL)":
+            cap = cv2.VideoCapture(ip_url)
+        else:
+            cap = cv2.VideoCapture(0)
 
         if not cap.isOpened():
-            st.error("❌ Không thể mở webcam. Kiểm tra camera và thử lại.")
+            st.error("❌ Không thể kết nối camera. Kiểm tra DroidCam và thử lại.")
         else:
             stframe = st.empty()
             stats_placeholder = st.empty()

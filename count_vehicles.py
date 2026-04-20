@@ -13,10 +13,10 @@ from ultralytics import YOLO
 import cv2
 
 # ===== CẤU HÌNH CAMERA =====
-# Cách 1: DroidCam (cài DroidCam Client → nhận như webcam)
+# Cách 1: DroidCam (cài DroidCam Client → điện thoại kết nối laptop)
 cap = cv2.VideoCapture(0)
 
-# Cách 2: IP Camera (dùng app IP Webcam trên Android)
+# Cách 2: IP Camera (dùng app DroidCam trên điện thoại)
 # cap = cv2.VideoCapture("http://192.168.1.x:8080/video")
 
 # Cách 3: DroidCam qua IP trực tiếp

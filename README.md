@@ -18,20 +18,61 @@
 
 > **"Phát triển hệ thống nhận diện giao thông"**
 >
-> ✅ Sản phẩm **bắt buộc phải kết nối camera**, có thuật toán để **đếm số lượng xe** và **nhận diện hình ảnh các loại xe**.
+> Sản phẩm **bắt buộc phải kết nối camera** (dùng **điện thoại cá nhân** qua app DroidCam), có thuật toán để **đếm số lượng xe** và **nhận diện hình ảnh các loại xe**.
 
-### Yêu cầu bắt buộc:
-- 📷 **Kết nối camera** (webcam laptop hoặc USB camera)
-- 🔢 **Đếm số lượng** phương tiện giao thông
-- 🚗 **Nhận diện loại xe**: ô tô, xe máy, xe tải, xe buýt, xe đạp (tối thiểu 3 loại)
-- 🖥️ **Giao diện demo** trực quan (Streamlit / Gradio / Flask)
+---
 
-### Yêu cầu khuyến khích (cộng điểm):
-- 🎯 Tracking xe qua nhiều frame (SORT/DeepSORT)
-- 📊 Dashboard thống kê lưu lượng, biểu đồ, heatmap
-- 🚧 Phân làn xe, đếm theo hướng
-- 🔔 Cảnh báo khi mật độ giao thông cao
-- 🇻🇳 Fine-tune model trên dữ liệu giao thông Việt Nam
+## 📱 CÁCH HOẠT ĐỘNG
+
+> Điện thoại = **camera quay phim** (DroidCam) → Laptop = **bộ não AI** (YOLOv8) → Kết quả hiển thị trên màn hình
+
+```
+📱 Điện thoại                💻 Laptop
+┌──────────────────┐  WiFi  ┌───────────────────────────┐
+│  App DroidCam     │──────►│ Phần mềm SV viết          │
+│  (chỉ quay video) │       │ → Nhận hình từ điện thoại  │
+│                   │       │ → YOLOv8 detect xe         │
+│  Chĩa camera     │       │ → Đếm xe, hiển thị kết quả │
+│  ra ngoài đường   │       │ → Chiếu lên máy chiếu      │
+└──────────────────┘        └───────────────────────────┘
+```
+
+**Điện thoại nào cũng làm được** — chỉ cần có camera + WiFi. Không cần mua thêm thiết bị!
+
+---
+
+## 🗺️ HÀNH TRÌNH SINH VIÊN: TỪ ĐĂNG KÝ → DỰ THI
+
+### Bước 1: 📝 Đăng ký (trước 30/04)
+- Lập nhóm 2-3 SV → đăng ký qua Google Form
+- Tham gia [Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)
+
+### Bước 2: 📥 Nhận Starter Kit (26/04 – 02/05)
+- Tải Starter Kit từ GitHub
+- Cài thư viện: `pip install -r requirements.txt`
+- Chạy thử: `python count_vehicles.py` → xem code mẫu hoạt động
+
+### Bước 3: 📱 Cài DroidCam (5 phút)
+- **Điện thoại**: Cài app **DroidCam** (miễn phí) từ Google Play / App Store
+- **Laptop**: Tải **DroidCam Client** từ [dev47apps.com](https://dev47apps.com)
+- Kết nối cùng WiFi → nhập IP → xong!
+- 📺 [Video hướng dẫn DroidCam (tiếng Việt)](https://www.youtube.com/results?search_query=hướng+dẫn+dùng+DroidCam)
+
+### Bước 4: 💻 Phát triển sản phẩm (2-4 tuần)
+- Dựa trên code mẫu `Demo_App.py` → chỉnh sửa, mở rộng
+- Kết nối điện thoại qua DroidCam → test detect xe real-time
+- Làm đẹp giao diện, thêm tính năng sáng tạo
+- Test nhiều lần → hoàn thiện
+
+### Bước 5: 📦 Nộp bài (trước 23/05 – 23:59)
+- Đóng gói: source code + báo cáo PDF (3-5 trang) + video demo (2-3 phút)
+- Nộp file `.zip` qua email: **nguyenbaduy@ktkt.edu.vn**
+
+### Bước 6: 🏆 Ngày thi 29/05
+1. **Setup**: Mở laptop → kết nối điện thoại (DroidCam/WiFi) → chạy app
+2. **Demo live**: Cầm điện thoại chĩa ra ngoài đường → BGK xem trên máy chiếu
+3. **Demo video**: Chạy app trên video BTC cung cấp
+4. **Thuyết trình + Q&A** → BGK chấm điểm → Trao giải
 
 ---
 
@@ -39,8 +80,8 @@
 
 ```
 Starter_Kit/
-├── count_vehicles.py       ← ⭐ Code mẫu đếm xe qua webcam (~45 dòng)
-├── Demo_App.py             ← Ứng dụng Streamlit đầy đủ (camera + video + ảnh)
+├── count_vehicles.py       ← ⭐ Code mẫu đếm xe qua điện thoại (~50 dòng)
+├── Demo_App.py             ← Ứng dụng Streamlit đầy đủ (DroidCam + video + ảnh)
 ├── requirements.txt        ← Thư viện cần cài
 └── README.md               ← File hướng dẫn này
 ```
@@ -50,26 +91,26 @@ Starter_Kit/
 ## 🚀 Bắt Đầu Nhanh
 
 ### 1. Cài thư viện
-
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Chạy code mẫu đếm xe (đơn giản nhất)
+### 2. Cài DroidCam
+- 📱 Điện thoại: Tải **DroidCam** từ Google Play / App Store
+- 💻 Laptop: Tải **DroidCam Client** từ [dev47apps.com](https://dev47apps.com)
+- Kết nối cùng WiFi → mở DroidCam → laptop nhận camera
 
+### 3. Chạy code mẫu
 ```bash
 python count_vehicles.py
 ```
-→ Mở webcam, nhận diện xe, đếm real-time. Nhấn `Q` để thoát.
+→ Cầm điện thoại chĩa ra đường → laptop hiện bounding box + đếm xe. Nhấn `Q` để thoát.
 
-### 3. Chạy ứng dụng Streamlit (đầy đủ)
-
+### 4. Chạy ứng dụng Streamlit
 ```bash
 streamlit run Demo_App.py
 ```
-→ Mở `http://localhost:8501` → Chọn Webcam / Video / Ảnh → Xem kết quả.
-
-> 💡 **Model tự động tải lần đầu** (`yolov8n.pt` ~6MB), không cần tải thủ công.
+→ Mở `http://localhost:8501` → Chọn **Camera Điện thoại** / Video / Ảnh → Xem kết quả.
 
 ---
 
@@ -83,29 +124,41 @@ streamlit run Demo_App.py
 
 ### 2. Bài toán
 
-**Xây dựng hệ thống kết nối camera để đếm số lượng xe và nhận diện hình ảnh các loại phương tiện giao thông.**
+**Xây dựng hệ thống kết nối camera điện thoại để đếm số lượng xe và nhận diện hình ảnh các loại phương tiện giao thông.**
 
 | | Yêu cầu |
 |---|---|
-| **Input** | 📷 Camera (BẮT BUỘC), video, hoặc ảnh giao thông |
+| **Input** | 📱 Camera điện thoại qua DroidCam (BẮT BUỘC), video hoặc ảnh |
 | **Output** | 🚗 Loại xe + 🔢 Số đếm + 📍 Bounding box + 💯 Confidence |
 | **Giao diện** | Streamlit / Gradio / Flask — BẮT BUỘC có GUI |
 
-### 3. Tiêu chí chấm điểm
+### 3. Yêu cầu bắt buộc
+- 📱 **Kết nối camera** điện thoại qua DroidCam
+- 🔢 **Đếm số lượng** xe theo từng loại (tối thiểu 3 loại)
+- 🖥️ **Giao diện** hiển thị bounding box, số đếm, loại xe
+- Sản phẩm tự phát triển, hạn chế sao chép
+
+### 4. Yêu cầu khuyến khích (cộng điểm)
+- 🎯 Tracking xe qua nhiều frame (SORT/DeepSORT)
+- 📊 Dashboard thống kê, biểu đồ, heatmap
+- 🚧 Phân làn xe, đếm theo hướng
+- 🔔 Cảnh báo khi mật độ giao thông cao
+- 🇻🇳 Fine-tune model trên dữ liệu giao thông VN
+
+### 5. Tiêu chí chấm điểm
 
 | STT | Tiêu chí | Trọng số | Mô tả |
 |-----|----------|----------|-------|
 | 1 | Độ chính xác nhận diện | **25%** | Nhận diện đúng loại xe, đếm chính xác |
-| 2 | Kết nối camera & Real-time | **25%** | Kết nối camera thành công, xử lý mượt mà |
+| 2 | Kết nối camera & Real-time | **25%** | Kết nối DroidCam thành công, xử lý mượt mà |
 | 3 | Giao diện & Demo | **20%** | UI trực quan, hiển thị bounding box, số đếm |
 | 4 | Sáng tạo & Mở rộng | **15%** | Tracking, phân làn, heatmap, dashboard... |
 | 5 | Tốc độ xử lý | **5%** | FPS khi inference qua camera |
 | 6 | Thuyết trình | **10%** | Trình bày rõ ràng, trả lời Q&A tốt |
-| | **TỔNG CỘNG** | **100%** | |
 
-### 4. Nộp bài
+### 6. Nộp bài
 
-> ⚠️ **DEADLINE: 23/05/2026 — 23:59** → Nộp qua mail: **nguyenbaduy@ktkt.edu.vn**
+> ⚠️ **DEADLINE: 23/05/2026 — 23:59** → Email: **nguyenbaduy@ktkt.edu.vn**
 
 ```
 Nhom_X_TenNhom.zip
@@ -116,12 +169,12 @@ Nhom_X_TenNhom.zip
 └── 📄 README.md          ← Hướng dẫn cài đặt & chạy
 ```
 
-### 5. Quy trình ngày thi (29/05/2026)
+### 7. Quy trình ngày thi (29/05/2026)
 
 | Thời gian | Nội dung |
 |-----------|----------|
 | 08:00 – 08:15 | Khai mạc |
-| 08:15 – 08:30 | Setup thiết bị, kết nối camera |
+| 08:15 – 08:30 | Setup: kết nối điện thoại (DroidCam), test WiFi |
 | 08:30 – 10:00 | Demo: 7 phút/nhóm + 3 phút Q&A |
 | 10:00 – 10:15 | Giải lao |
 | 10:15 – 10:45 | BGK hội ý chấm điểm |
@@ -131,12 +184,23 @@ Nhom_X_TenNhom.zip
 
 ## 🛠️ HƯỚNG DẪN KỸ THUẬT
 
-### A. YOLOv8 — Nhận diện phương tiện
+### A. Cài đặt DroidCam (biến điện thoại thành camera)
 
-**YOLOv8 pretrained trên COCO** đã nhận diện sẵn các loại xe, **không cần train**:
+| Bước | Điện thoại 📱 | Laptop 💻 |
+|------|-------------|-----------|
+| 1 | Tải **DroidCam** từ Store | Tải **DroidCam Client** từ [dev47apps.com](https://dev47apps.com) |
+| 2 | Mở app → cấp quyền Camera | Cài đặt → mở app |
+| 3 | Ghi nhớ **WiFi IP** hiển thị | Nhập IP → nhấn **Start** |
+| 4 | ✅ Điện thoại = camera cho laptop | ✅ Laptop nhận hình từ điện thoại |
 
-| Class ID | Tên tiếng Anh | Tên tiếng Việt |
-|----------|---------------|----------------|
+> 💡 Cũng có thể kết nối qua **cáp USB** để hình ảnh mượt hơn WiFi.
+
+### B. YOLOv8 — Nhận diện phương tiện
+
+YOLOv8 pretrained trên COCO **đã nhận diện sẵn** xe, không cần train:
+
+| Class ID | Tên | Ghi chú |
+|----------|-----|---------|
 | 1 | bicycle | Xe đạp |
 | 2 | car | Ô tô |
 | 3 | motorcycle | Xe máy |
@@ -145,42 +209,12 @@ Nhom_X_TenNhom.zip
 
 ```python
 from ultralytics import YOLO
-
-# Tải model (tự động download lần đầu)
-model = YOLO("yolov8n.pt")  # nano (nhanh) | yolov8s.pt (chính xác hơn)
-
-# Nhận diện trên ảnh
+model = YOLO("yolov8n.pt")  # Tự động tải lần đầu (~6MB)
 results = model("traffic.jpg")
-results[0].show()  # Hiển thị kết quả
-
-# Nhận diện trên video
-results = model("traffic.mp4", show=True)
+results[0].show()
 ```
 
-### B. OpenCV — Kết nối Camera
-
-```python
-import cv2
-
-# Mở webcam (0 = camera mặc định)
-cap = cv2.VideoCapture(0)
-
-while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
-        break
-
-    # Xử lý frame ở đây...
-
-    cv2.imshow("Camera", frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-cap.release()
-cv2.destroyAllWindows()
-```
-
-### C. Kết hợp YOLOv8 + Camera = Đếm xe
+### C. Kết hợp Điện thoại + YOLOv8 = Đếm xe
 
 ```python
 from ultralytics import YOLO
@@ -189,14 +223,18 @@ import cv2
 model = YOLO("yolov8n.pt")
 VEHICLES = {2: "car", 3: "motorcycle", 5: "bus", 7: "truck", 1: "bicycle"}
 
+# Cách 1: DroidCam Client (điện thoại kết nối laptop)
 cap = cv2.VideoCapture(0)
+
+# Cách 2: IP Camera
+# cap = cv2.VideoCapture("http://192.168.1.x:4747/video")
+
 while cap.isOpened():
     ret, frame = cap.read()
     if not ret:
         break
 
     results = model(frame, verbose=False)[0]
-
     count = {}
     for box in results.boxes:
         cls_id = int(box.cls[0])
@@ -208,13 +246,11 @@ while cap.isOpened():
             cv2.putText(frame, f"{name} {float(box.conf[0]):.0%}",
                         (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,255,0), 2)
 
-    total = sum(count.values())
-    cv2.putText(frame, f"Total: {total}", (10, 30),
+    cv2.putText(frame, f"Total: {sum(count.values())}", (10, 30),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     cv2.imshow("Vehicle Counter", frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-
 cap.release()
 ```
 
@@ -227,52 +263,22 @@ from PIL import Image
 import numpy as np
 
 model = YOLO("yolov8n.pt")
-
 st.title("🚦 Nhận diện giao thông")
 uploaded = st.file_uploader("Upload ảnh", type=["jpg", "png"])
 
 if uploaded:
     image = Image.open(uploaded)
     results = model(np.array(image))[0]
-
-    # Vẽ kết quả
-    annotated = results.plot()
-    st.image(annotated, caption="Kết quả", use_container_width=True)
-
-    # Đếm xe
-    VEHICLES = {2: "car", 3: "motorcycle", 5: "bus", 7: "truck"}
-    for box in results.boxes:
-        cls_id = int(box.cls[0])
-        if cls_id in VEHICLES:
-            st.write(f"- {VEHICLES[cls_id]}: {float(box.conf[0]):.0%}")
+    st.image(results.plot(), caption="Kết quả", use_container_width=True)
 ```
 
-### E. Nâng cao — Tracking với SORT
+### E. So sánh Model YOLOv8
 
-```python
-# pip install sort-tracker
-from sort import Sort
-import numpy as np
-
-tracker = Sort()
-
-# Trong vòng lặp camera:
-#   detections = [[x1, y1, x2, y2, conf], ...]
-#   tracked = tracker.update(np.array(detections))
-#   Mỗi tracked object có ID riêng → đếm không trùng
-```
-
----
-
-## 📊 So Sánh Các Model YOLOv8
-
-| Model | Kích thước | Tốc độ (FPS) | Độ chính xác | Gợi ý |
-|-------|-----------|-------------|-------------|-------|
-| `yolov8n.pt` | 6 MB | ~45 FPS | ⭐⭐⭐ | Nhanh, phù hợp laptop yếu |
-| `yolov8s.pt` | 22 MB | ~35 FPS | ⭐⭐⭐⭐ | Cân bằng tốc độ/chính xác |
-| `yolov8m.pt` | 50 MB | ~20 FPS | ⭐⭐⭐⭐⭐ | Chính xác cao |
-
-> 💡 **Khuyến nghị**: Dùng `yolov8n.pt` để phát triển, chuyển sang `yolov8s.pt` cho bản nộp.
+| Model | Kích thước | Tốc độ | Chính xác | Gợi ý |
+|-------|-----------|--------|-----------|-------|
+| `yolov8n.pt` | 6 MB | ~45 FPS | ⭐⭐⭐ | Laptop yếu, phát triển |
+| `yolov8s.pt` | 22 MB | ~35 FPS | ⭐⭐⭐⭐ | Bản nộp |
+| `yolov8m.pt` | 50 MB | ~20 FPS | ⭐⭐⭐⭐⭐ | Laptop mạnh |
 
 ---
 
@@ -281,18 +287,17 @@ tracker = Sort()
 | Tài nguyên | Link |
 |-----------|------|
 | YOLOv8 Docs | [docs.ultralytics.com](https://docs.ultralytics.com) |
+| DroidCam | [dev47apps.com](https://dev47apps.com) |
 | OpenCV | [opencv.org](https://opencv.org) |
 | Streamlit | [docs.streamlit.io](https://docs.streamlit.io) |
 | SORT Tracking | [github.com/abewley/sort](https://github.com/abewley/sort) |
 | VisDrone Dataset | [github.com/VisDrone](https://github.com/VisDrone/VisDrone-Dataset) |
-| COCO Classes | [cocodataset.org](https://cocodataset.org) |
-| Roboflow (gán nhãn) | [roboflow.com](https://roboflow.com) |
 
 ---
 
 ## ❓ Hỗ Trợ
 
-- 💬 **[Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)** — BETU-traffic-sign-detection
+- 💬 **[Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)**
 - 👨‍🏫 **Thầy Nguyễn Ba Duy** (phụ trách kỹ thuật)
 - 🤝 **Lê Văn Xin** (phối hợp tổ chức)
 
@@ -300,8 +305,8 @@ tracker = Sort()
 
 > ⚠️ **LƯU Ý QUAN TRỌNG**
 > - Sản phẩm **BẮT BUỘC** kết nối camera và demo real-time ngày thi.
-> - Chuẩn bị **laptop có webcam** hoặc **camera USB**.
-> - BTC chuẩn bị 02 camera USB dự phòng cho ngày thi.
+> - Chuẩn bị **laptop + điện thoại cài sẵn DroidCam**.
+> - Phòng thi có **WiFi** cho kết nối DroidCam.
 > - Sản phẩm phải là công sức của nhóm. **Nghiêm cấm sao chép.**
 
 ---
