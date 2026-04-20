@@ -102,7 +102,7 @@ streamlit run Demo_App.py
 
 Nếu gặp lỗi hoặc cần giúp đỡ:
 - 💬 Tham gia **[Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)** — BETU-traffic-sign-detection
-- Liên hệ **Thầy Nguyên Ba Duy** (Tổ chức)
+- Liên hệ **Thầy Nguyễn Ba Duy** (Tổ chức)
 - Liên hệ **Lê Văn Xin** (Hỗ trợ)
 
 ---
@@ -122,7 +122,7 @@ Nếu gặp lỗi hoặc cần giúp đỡ:
 |-----------|----------|
 | 📅 Ngày thi | **29/05/2026** |
 | ⏰ Hạn nộp bài | **23/05/2026 (23:59)** |
-| 👨‍🏫 Phụ trách | Thầy Nguyên Ba Duy |
+| 👨‍🏫 Phụ trách | Thầy Nguyễn Ba Duy |
 | 🤝 Phối hợp | Lê Văn Xin |
 
 ---
@@ -293,4 +293,4 @@ Mọi thắc mắc về đề bài, kỹ thuật, hoặc nộp bài, vui lòng l
 
 *Bình Dương, ngày 20 tháng 04 năm 2026*
 
-**NGƯỜI PHỤ TRÁCH — Thầy Nguyên Ba Duy**
+**NGƯỜI PHỤ TRÁCH — Thầy Nguyễn Ba Duy**
