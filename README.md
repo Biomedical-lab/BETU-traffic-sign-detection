@@ -1,296 +1,312 @@
-# 📘 STARTER KIT — Cuộc Thi "Phát triển hệ thống nhận diện giao thông"
+# 🚦 CUỘC THI: "Phát triển hệ thống nhận diện giao thông"
 
-## 🚦 Ngày hội Công nghệ Thông tin — BETU 2026
+### Ngày hội Công nghệ Thông tin — BETU 2026
 
-> 📝 **[ĐĂNG KÝ NHÓM TẠI ĐÂY](https://forms.gle/HXa6bXhfoxBKR5KX7)** — ⏰ Thời hạn đăng ký: trước ngày **30/04/2026**
+> 📝 **[ĐĂNG KÝ NHÓM TẠI ĐÂY](https://forms.gle/HXa6bXhfoxBKR5KX7)** — ⏰ Hạn đăng ký: **30/04/2026**
+
+| Thông tin | Chi tiết |
+|-----------|----------|
+| 📅 Ngày thi | **29/05/2026** (Thứ Sáu) |
+| ⏰ Hạn nộp bài | **23/05/2026 (23:59)** |
+| 👨‍🏫 Phụ trách | Thầy Nguyễn Ba Duy |
+| 🤝 Phối hợp | Lê Văn Xin |
+| 👥 Nhóm | 3 – 4 sinh viên |
 
 ---
 
-## 📁 Cấu trúc Starter Kit
+## 📌 Chủ Đề Cuộc Thi
+
+> **"Phát triển hệ thống nhận diện giao thông"**
+>
+> ✅ Sản phẩm **bắt buộc phải kết nối camera**, có thuật toán để **đếm số lượng xe** và **nhận diện hình ảnh các loại xe**.
+
+### Yêu cầu bắt buộc:
+- 📷 **Kết nối camera** (webcam laptop hoặc USB camera)
+- 🔢 **Đếm số lượng** phương tiện giao thông
+- 🚗 **Nhận diện loại xe**: ô tô, xe máy, xe tải, xe buýt, xe đạp (tối thiểu 3 loại)
+- 🖥️ **Giao diện demo** trực quan (Streamlit / Gradio / Flask)
+
+### Yêu cầu khuyến khích (cộng điểm):
+- 🎯 Tracking xe qua nhiều frame (SORT/DeepSORT)
+- 📊 Dashboard thống kê lưu lượng, biểu đồ, heatmap
+- 🚧 Phân làn xe, đếm theo hướng
+- 🔔 Cảnh báo khi mật độ giao thông cao
+- 🇻🇳 Fine-tune model trên dữ liệu giao thông Việt Nam
+
+---
+
+## 📁 Starter Kit
 
 ```
 Starter_Kit/
-├── Train_YOLOv8_Bien_Bao.ipynb   ← Notebook train model (mở trên Google Colab)
-├── Demo_App.py                    ← Ứng dụng demo Streamlit
-├── requirements.txt               ← Thư viện cần cài
-└── README.md                      ← File hướng dẫn này
+├── count_vehicles.py       ← ⭐ Code mẫu đếm xe qua webcam (~45 dòng)
+├── Demo_App.py             ← Ứng dụng Streamlit đầy đủ (camera + video + ảnh)
+├── requirements.txt        ← Thư viện cần cài
+└── README.md               ← File hướng dẫn này
 ```
 
 ---
 
-## 🚀 Hướng Dẫn Sử Dụng
+## 🚀 Bắt Đầu Nhanh
 
-### Bước 1: Train model trên Google Colab
+### 1. Cài thư viện
 
-1. Mở file **`Train_YOLOv8_Bien_Bao.ipynb`**
-2. Truy cập [Google Colab](https://colab.research.google.com/)
-3. Chọn **File → Upload notebook** → chọn file `.ipynb`
-4. Chọn **Runtime → Change runtime type → GPU (T4)**
-5. Chạy từng ô (cell) từ trên xuống dưới
-6. Sau khi train xong, tải file `best.pt` về máy
-
-### Bước 2: Chạy ứng dụng Demo trên máy tính
-
-#### Cài đặt thư viện:
 ```bash
 pip install -r requirements.txt
 ```
 
-#### Chạy ứng dụng:
+### 2. Chạy code mẫu đếm xe (đơn giản nhất)
+
+```bash
+python count_vehicles.py
+```
+→ Mở webcam, nhận diện xe, đếm real-time. Nhấn `Q` để thoát.
+
+### 3. Chạy ứng dụng Streamlit (đầy đủ)
+
 ```bash
 streamlit run Demo_App.py
 ```
+→ Mở `http://localhost:8501` → Chọn Webcam / Video / Ảnh → Xem kết quả.
 
-#### Mở trình duyệt:
-- Truy cập: `http://localhost:8501`
-- Upload ảnh biển báo → xem kết quả nhận diện
-
----
-
-## 📊 Dataset
-
-### Dataset có sẵn (GTSRB)
-- **German Traffic Sign Recognition Benchmark** — 43 loại biển báo, ~50.000 ảnh
-- 📥 **Link tải trực tiếp:**
-  - [Training data (~263 MB)](https://sid.erda.dk/public/archives/daaeac0d7ce1152aea9b61d9f1e19370/GTSRB_Final_Training_Images.zip)
-  - [Test data (~84 MB)](https://sid.erda.dk/public/archives/daaeac0d7ce1152aea9b61d9f1e19370/GTSRB_Final_Test_Images.zip)
-  - [Trang chủ GTSRB](https://benchmark.ini.rub.de/gtsrb_news.html)
-- 💡 **Notebook sẽ tự động tải dataset này**, không cần tải thủ công
-
-### Tự thu thập dữ liệu (cộng 10% điểm!)
-- Chụp ảnh biển báo giao thông tại Bình Dương, TP.HCM
-- Sử dụng [Roboflow](https://roboflow.com/) để gán nhãn (miễn phí)
-- Mỗi loại biển báo cần ít nhất 50 ảnh
-
----
-
-## 🛠️ Công Nghệ Sử Dụng
-
-| Công nghệ | Phiên bản | Mục đích |
-|-----------|-----------|----------|
-| Python | 3.10+ | Ngôn ngữ lập trình |
-| YOLOv8 | Ultralytics | Model nhận diện vật thể |
-| PyTorch | 2.0+ | Framework deep learning |
-| Streamlit | 1.30+ | Tạo giao diện web |
-| OpenCV | 4.8+ | Xử lý ảnh/video |
-| Pillow | 10.0+ | Xử lý ảnh |
-
----
-
-## 💡 Gợi Ý Cải Tiến (Để Được Điểm Cao)
-
-1. **Thu thập biển báo Việt Nam** — Chụp thực tế, gán nhãn → cộng 10% điểm
-2. **Nhận diện real-time** — Dùng webcam để nhận diện trực tiếp
-3. **Tăng số lớp** — Train thêm nhiều loại biển báo (> 20 loại)
-4. **Làm đẹp giao diện** — CSS, animation, dashboard thống kê
-5. **Tracking** — Theo dõi biển báo qua nhiều frame video
-6. **Cảnh báo âm thanh** — Phát âm thanh khi phát hiện biển báo quan trọng
-
----
-
-## 📎 Tài Nguyên Tham Khảo
-
-- [Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/)
-- [Roboflow - Gán nhãn miễn phí](https://roboflow.com/)
-- [Google Colab](https://colab.research.google.com/)
-- [Streamlit Docs](https://docs.streamlit.io/)
-- [OpenCV Tutorial](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html)
-
----
-
-## ❓ Hỗ Trợ
-
-Nếu gặp lỗi hoặc cần giúp đỡ:
-- 💬 Tham gia **[Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)** — BETU-traffic-sign-detection
-- Liên hệ **Thầy Nguyễn Ba Duy** (Tổ chức)
-- Liên hệ **Lê Văn Xin** (Hỗ trợ)
-
----
-
-**Chúc các nhóm thi tốt! 🎯**
+> 💡 **Model tự động tải lần đầu** (`yolov8n.pt` ~6MB), không cần tải thủ công.
 
 ---
 
 ## 📜 THỂ LỆ CUỘC THI
 
-> **TRƯỜNG ĐẠI HỌC KINH TẾ - KỸ THUẬT BÌNH DƯƠNG**
-> **NGÀY HỘI CÔNG NGHỆ THÔNG TIN 2026**
+### 1. Đối tượng & Hình thức
+- **Đối tượng**: Sinh viên Khoa KT-CN, Trường ĐH KT-KT Bình Dương
+- **Nhóm**: 3 – 4 sinh viên/nhóm
+- **Thời gian phát triển**: 4 tuần (26/04 – 23/05/2026)
+- **Ngày thi**: 29/05/2026 – Demo trực tiếp trước Ban giám khảo
 
-### CHỦ ĐỀ: "Phát triển hệ thống nhận diện giao thông"
+### 2. Bài toán
 
-| Thông tin | Chi tiết |
-|-----------|----------|
-| 📅 Ngày thi | **29/05/2026** |
-| ⏰ Hạn nộp bài | **23/05/2026 (23:59)** |
-| 👨‍🏫 Phụ trách | Thầy Nguyễn Ba Duy |
-| 🤝 Phối hợp | Lê Văn Xin |
+**Xây dựng hệ thống kết nối camera để đếm số lượng xe và nhận diện hình ảnh các loại phương tiện giao thông.**
 
----
+| | Yêu cầu |
+|---|---|
+| **Input** | 📷 Camera (BẮT BUỘC), video, hoặc ảnh giao thông |
+| **Output** | 🚗 Loại xe + 🔢 Số đếm + 📍 Bounding box + 💯 Confidence |
+| **Giao diện** | Streamlit / Gradio / Flask — BẮT BUỘC có GUI |
 
-### 1. Bài Toán
+### 3. Tiêu chí chấm điểm
 
-Xây dựng hệ thống nhận diện biển báo giao thông Việt Nam sử dụng trí tuệ nhân tạo (AI).
-
-**Mô tả:** Hệ thống nhận ảnh hoặc video đầu vào chứa biển báo giao thông, tự động phát hiện vị trí biển báo và phân loại chính xác loại biển báo đó. Hệ thống cần có giao diện trực quan để người dùng dễ dàng sử dụng và xem kết quả.
-
----
-
-### 2. Yêu Cầu Kỹ Thuật
-
-#### 2.1. Đầu vào (Input)
-- Ảnh chụp chứa biển báo giao thông (JPG, PNG)
-- Hoặc video quay cảnh đường phố có biển báo (MP4, AVI)
-- Hoặc luồng video trực tiếp từ webcam (khuyến khích)
-
-#### 2.2. Đầu ra (Output)
-- Tên, loại biển báo giao thông được nhận diện
-- Vị trí biển báo trong ảnh (bounding box)
-- Độ tin cậy của kết quả (confidence score, %)
-- Hiển thị kết quả trực quan trên giao diện
-
-#### 2.3. Yêu cầu bắt buộc
-- Nhận diện được tối thiểu **10 loại biển báo** giao thông khác nhau
-- Có giao diện người dùng (GUI) để upload ảnh/video và xem kết quả
-- Giao diện có thể là: web app (Streamlit, Gradio, Flask) hoặc desktop app
-- Source code chạy được trên Google Colab hoặc máy tính cá nhân
-
-#### 2.4. Yêu cầu khuyến khích (cộng điểm)
-- Nhận diện real-time qua webcam
-- Nhận diện trên video (không chỉ ảnh tĩnh)
-- Sử dụng/tự thu thập dữ liệu biển báo Việt Nam thực tế
-- Tính năng mở rộng: tracking, đếm, cảnh báo âm thanh, dashboard thống kê...
-- Số loại biển báo nhận diện được > 20 loại
-
----
-
-### 3. Công Nghệ Gợi Ý
-
-Các nhóm được tự do lựa chọn công nghệ. Dưới đây là gợi ý tham khảo:
-
-| Thành phần | Công nghệ gợi ý | Ghi chú |
-|------------|-----------------|---------|
-| Ngôn ngữ | Python 3.10+ | Bắt buộc |
-| Model AI | YOLOv8, YOLOv11 | Hoặc model tương đương |
-| Framework | PyTorch, TensorFlow | Tùy chọn |
-| Giao diện | Streamlit, Gradio, Flask | Bắt buộc có GUI |
-| Xử lý video | OpenCV | Nếu xử lý video |
-| Training GPU | Google Colab | Miễn phí GPU T4 |
-| Gán nhãn dữ liệu | Roboflow, LabelImg | Nếu tự thu thập data |
-
----
-
-### 4. Dataset (Bộ Dữ Liệu)
-
-#### 4.1. Dataset có sẵn (cung cấp trong Starter Kit)
-- **GTSRB** (German Traffic Sign Recognition Benchmark) — 43 loại biển báo, ~50.000 ảnh
-- Link: [https://benchmark.ini.rub.de/gtsrb_news.html](https://benchmark.ini.rub.de/gtsrb_news.html)
-
-#### 4.2. Tự thu thập (được cộng điểm)
-- Chụp ảnh biển báo giao thông thực tế tại Bình Dương, TP.HCM
-- Gán nhãn bằng [Roboflow](https://roboflow.com/) (miễn phí) hoặc LabelImg
-- Mỗi loại biển báo cần tối thiểu 50 ảnh để train tốt
-
-> [!TIP]
-> Các nhóm tự thu thập dữ liệu biển báo Việt Nam sẽ được **cộng 10% điểm** trong tiêu chí "Dữ liệu Việt Nam".
-
----
-
-### 5. Tiêu Chí Chấm Điểm
-
-| STT | Tiêu chí | Trọng số | Mô tả chi tiết |
-|-----|----------|----------|-----------------|
-| 1 | Độ chính xác | **30%** | Số loại biển báo nhận diện được, mAP/F1-score trên tập test chung do BTC cung cấp |
-| 2 | Giao diện & Demo | **25%** | UI đẹp, trực quan, dễ sử dụng. Demo chạy mượt, ổn định |
-| 3 | Sáng tạo & Mở rộng | **15%** | Tính năng bổ sung: real-time webcam, tracking, cảnh báo, dashboard thống kê... |
-| 4 | Tốc độ xử lý | **10%** | FPS khi inference, khả năng xử lý nhanh trên ảnh/video |
-| 5 | Dữ liệu Việt Nam | **10%** | Tự thu thập/sử dụng ảnh biển báo VN thực tế |
-| 6 | Thuyết trình | **10%** | Trình bày rõ ràng, logic, trả lời Q&A tốt |
+| STT | Tiêu chí | Trọng số | Mô tả |
+|-----|----------|----------|-------|
+| 1 | Độ chính xác nhận diện | **25%** | Nhận diện đúng loại xe, đếm chính xác |
+| 2 | Kết nối camera & Real-time | **25%** | Kết nối camera thành công, xử lý mượt mà |
+| 3 | Giao diện & Demo | **20%** | UI trực quan, hiển thị bounding box, số đếm |
+| 4 | Sáng tạo & Mở rộng | **15%** | Tracking, phân làn, heatmap, dashboard... |
+| 5 | Tốc độ xử lý | **5%** | FPS khi inference qua camera |
+| 6 | Thuyết trình | **10%** | Trình bày rõ ràng, trả lời Q&A tốt |
 | | **TỔNG CỘNG** | **100%** | |
 
----
+### 4. Nộp bài
 
-### 6. Quy Định Nộp Bài
-
-#### 6.1. Hạn nộp
-
-> [!IMPORTANT]
-> **DEADLINE: 23/05/2026 - 23:59**
-> Nộp vào mail: **nguyenbaduy@ktkt.edu.vn**
-
-#### 6.2. Nội dung nộp
-
-Mỗi nhóm nộp 1 thư mục nén (`.zip`) với cấu trúc sau:
+> ⚠️ **DEADLINE: 23/05/2026 — 23:59** → Nộp qua mail: **nguyenbaduy@ktkt.edu.vn**
 
 ```
 Nhom_X_TenNhom.zip
-├── 📂 source_code/          ← Toàn bộ code dự án
-│   ├── train.py hoặc train.ipynb
-│   ├── app.py               ← File chạy demo
-│   ├── requirements.txt     ← Thư viện cần cài
-│   └── ...
-├── 📂 model/                ← File model đã train
-│   └── best.pt              ← Weights tốt nhất
-├── 📂 dataset/              ← Dataset (hoặc link Google Drive)
-│   └── README.md            ← Mô tả nguồn dataset
-├── 📂 demo_video/           ← Video quay demo sản phẩm (2-3 phút)
-│   └── demo.mp4
-├── 📄 Bao_cao.pdf           ← Báo cáo kỹ thuật (3-5 trang)
-└── 📄 README.md             ← Hướng dẫn cài đặt & chạy
+├── 📂 source_code/       ← Toàn bộ code (app.py, ...)
+├── 📂 model/             ← File model (nếu fine-tune)
+├── 📂 demo_video/        ← Video demo sản phẩm (2-3 phút)
+├── 📄 Bao_cao.pdf        ← Báo cáo kỹ thuật (3-5 trang)
+└── 📄 README.md          ← Hướng dẫn cài đặt & chạy
 ```
 
-#### 6.3. Yêu cầu báo cáo kỹ thuật (Bao_cao.pdf)
+### 5. Quy trình ngày thi (29/05/2026)
 
-Báo cáo 3–5 trang, bao gồm:
-- Giới thiệu bài toán và mục tiêu
-- Mô tả dữ liệu sử dụng (nguồn, số lượng, số lớp)
-- Kiến trúc mô hình và phương pháp huấn luyện
-- Kết quả đánh giá (accuracy, mAP, F1-score, FPS)
-- Hướng dẫn sử dụng hệ thống
-- Phân công công việc trong nhóm
-
----
-
-### 7. Quy Trình Ngày Thi (29/05/2026)
-
-| Thời gian | Nội dung | Ghi chú |
-|-----------|----------|---------|
-| 08:00 – 08:15 | Khai mạc, giới thiệu Ban giám khảo | |
-| 08:15 – 08:30 | Các nhóm setup thiết bị, chuẩn bị demo | |
-| 08:30 – 10:00 | Trình bày và Demo (7 phút demo + 3 phút Q&A/nhóm) | 6 nhóm × 10 phút |
-| 10:00 – 10:15 | Nghỉ giải lao | |
-| 10:15 – 10:45 | Ban giám khảo hội ý, chấm điểm | |
-| 10:45 – 11:15 | Công bố kết quả, trao giải | |
+| Thời gian | Nội dung |
+|-----------|----------|
+| 08:00 – 08:15 | Khai mạc |
+| 08:15 – 08:30 | Setup thiết bị, kết nối camera |
+| 08:30 – 10:00 | Demo: 7 phút/nhóm + 3 phút Q&A |
+| 10:00 – 10:15 | Giải lao |
+| 10:15 – 10:45 | BGK hội ý chấm điểm |
+| 10:45 – 11:15 | Công bố kết quả, trao giải |
 
 ---
 
-### 8. Tài Nguyên Tham Khảo
+## 🛠️ HƯỚNG DẪN KỸ THUẬT
 
-- [Ultralytics YOLOv8](https://docs.ultralytics.com)
-- [Roboflow (gán nhãn miễn phí)](https://roboflow.com)
-- [Google Colab (GPU miễn phí)](https://colab.research.google.com)
-- [Streamlit (tạo web app)](https://streamlit.io)
-- [Gradio (tạo demo ML)](https://gradio.app)
-- [Dataset GTSRB](https://benchmark.ini.rub.de/gtsrb_news.html)
-- [OpenCV (xử lý ảnh/video)](https://opencv.org)
+### A. YOLOv8 — Nhận diện phương tiện
+
+**YOLOv8 pretrained trên COCO** đã nhận diện sẵn các loại xe, **không cần train**:
+
+| Class ID | Tên tiếng Anh | Tên tiếng Việt |
+|----------|---------------|----------------|
+| 1 | bicycle | Xe đạp |
+| 2 | car | Ô tô |
+| 3 | motorcycle | Xe máy |
+| 5 | bus | Xe buýt |
+| 7 | truck | Xe tải |
+
+```python
+from ultralytics import YOLO
+
+# Tải model (tự động download lần đầu)
+model = YOLO("yolov8n.pt")  # nano (nhanh) | yolov8s.pt (chính xác hơn)
+
+# Nhận diện trên ảnh
+results = model("traffic.jpg")
+results[0].show()  # Hiển thị kết quả
+
+# Nhận diện trên video
+results = model("traffic.mp4", show=True)
+```
+
+### B. OpenCV — Kết nối Camera
+
+```python
+import cv2
+
+# Mở webcam (0 = camera mặc định)
+cap = cv2.VideoCapture(0)
+
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    # Xử lý frame ở đây...
+
+    cv2.imshow("Camera", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+```
+
+### C. Kết hợp YOLOv8 + Camera = Đếm xe
+
+```python
+from ultralytics import YOLO
+import cv2
+
+model = YOLO("yolov8n.pt")
+VEHICLES = {2: "car", 3: "motorcycle", 5: "bus", 7: "truck", 1: "bicycle"}
+
+cap = cv2.VideoCapture(0)
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    results = model(frame, verbose=False)[0]
+
+    count = {}
+    for box in results.boxes:
+        cls_id = int(box.cls[0])
+        if cls_id in VEHICLES:
+            name = VEHICLES[cls_id]
+            count[name] = count.get(name, 0) + 1
+            x1, y1, x2, y2 = map(int, box.xyxy[0])
+            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+            cv2.putText(frame, f"{name} {float(box.conf[0]):.0%}",
+                        (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,255,0), 2)
+
+    total = sum(count.values())
+    cv2.putText(frame, f"Total: {total}", (10, 30),
+                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+    cv2.imshow("Vehicle Counter", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+```
+
+### D. Streamlit — Tạo giao diện web
+
+```python
+import streamlit as st
+from ultralytics import YOLO
+from PIL import Image
+import numpy as np
+
+model = YOLO("yolov8n.pt")
+
+st.title("🚦 Nhận diện giao thông")
+uploaded = st.file_uploader("Upload ảnh", type=["jpg", "png"])
+
+if uploaded:
+    image = Image.open(uploaded)
+    results = model(np.array(image))[0]
+
+    # Vẽ kết quả
+    annotated = results.plot()
+    st.image(annotated, caption="Kết quả", use_container_width=True)
+
+    # Đếm xe
+    VEHICLES = {2: "car", 3: "motorcycle", 5: "bus", 7: "truck"}
+    for box in results.boxes:
+        cls_id = int(box.cls[0])
+        if cls_id in VEHICLES:
+            st.write(f"- {VEHICLES[cls_id]}: {float(box.conf[0]):.0%}")
+```
+
+### E. Nâng cao — Tracking với SORT
+
+```python
+# pip install sort-tracker
+from sort import Sort
+import numpy as np
+
+tracker = Sort()
+
+# Trong vòng lặp camera:
+#   detections = [[x1, y1, x2, y2, conf], ...]
+#   tracked = tracker.update(np.array(detections))
+#   Mỗi tracked object có ID riêng → đếm không trùng
+```
 
 ---
 
-### 9. Liên Hệ & Hỗ Trợ
+## 📊 So Sánh Các Model YOLOv8
 
-Mọi thắc mắc về đề bài, kỹ thuật, hoặc nộp bài, vui lòng liên hệ:
-- 👨‍🏫 **Thầy Nguyễn Ba Duy** (phụ trách kỹ thuật)
-- 🤝 **Lê Văn Xin** (phối hợp tổ chức)
+| Model | Kích thước | Tốc độ (FPS) | Độ chính xác | Gợi ý |
+|-------|-----------|-------------|-------------|-------|
+| `yolov8n.pt` | 6 MB | ~45 FPS | ⭐⭐⭐ | Nhanh, phù hợp laptop yếu |
+| `yolov8s.pt` | 22 MB | ~35 FPS | ⭐⭐⭐⭐ | Cân bằng tốc độ/chính xác |
+| `yolov8m.pt` | 50 MB | ~20 FPS | ⭐⭐⭐⭐⭐ | Chính xác cao |
+
+> 💡 **Khuyến nghị**: Dùng `yolov8n.pt` để phát triển, chuyển sang `yolov8s.pt` cho bản nộp.
+
+---
+
+## 📎 Tài Nguyên
+
+| Tài nguyên | Link |
+|-----------|------|
+| YOLOv8 Docs | [docs.ultralytics.com](https://docs.ultralytics.com) |
+| OpenCV | [opencv.org](https://opencv.org) |
+| Streamlit | [docs.streamlit.io](https://docs.streamlit.io) |
+| SORT Tracking | [github.com/abewley/sort](https://github.com/abewley/sort) |
+| VisDrone Dataset | [github.com/VisDrone](https://github.com/VisDrone/VisDrone-Dataset) |
+| COCO Classes | [cocodataset.org](https://cocodataset.org) |
+| Roboflow (gán nhãn) | [roboflow.com](https://roboflow.com) |
+
+---
+
+## ❓ Hỗ Trợ
+
 - 💬 **[Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)** — BETU-traffic-sign-detection
+- 👨‍🏫 **Thầy Nguyễn Ba Duy** (phụ trách kỹ thuật)
+- 🤝 **Lê Văn Xin** (phối hợp tổ chức)
 
 ---
 
-> [!CAUTION]
-> **LƯU Ý QUAN TRỌNG**
-> - Starter Kit (notebook mẫu + dataset mẫu) sẽ được phát cùng đề bài.
-> - Các nhóm được khuyến khích sáng tạo và mở rộng vượt xa yêu cầu cơ bản.
-> - Sản phẩm phải là công sức của nhóm. **Nghiêm cấm sao chép từ nhóm khác.**
-> - BTC sẽ cung cấp tập test riêng vào ngày thi để đánh giá công bằng.
+> ⚠️ **LƯU Ý QUAN TRỌNG**
+> - Sản phẩm **BẮT BUỘC** kết nối camera và demo real-time ngày thi.
+> - Chuẩn bị **laptop có webcam** hoặc **camera USB**.
+> - BTC chuẩn bị 02 camera USB dự phòng cho ngày thi.
+> - Sản phẩm phải là công sức của nhóm. **Nghiêm cấm sao chép.**
+
+---
+
+**Chúc các nhóm thi tốt! 🎯🚗💨**
 
 *Bình Dương, ngày 20 tháng 04 năm 2026*
-
-**NGƯỜI PHỤ TRÁCH — Thầy Nguyễn Ba Duy**
+**NGƯỜI PHỤ TRÁCH — Thầy Nguyễn Ba Duy**
