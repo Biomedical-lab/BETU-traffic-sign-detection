@@ -298,8 +298,8 @@ if uploaded:
 ## ❓ Hỗ Trợ
 
 - 💬 **[Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)**
-- 👨‍🏫 **Thầy Nguyễn Ba Duy** (phụ trách kỹ thuật)
-- 🤝 **Lê Văn Xin** (phối hợp tổ chức)
+- 👨‍🏫 **Thầy Nguyễn Ba Duy** (Chịu trách nhiệm chính)
+- 🤝 **Lê Văn Xin** (phối hợp)
 
 ---
 
