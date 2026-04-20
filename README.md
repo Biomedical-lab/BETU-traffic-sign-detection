@@ -48,7 +48,7 @@
 - Tham gia [Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)
 
 ### Bước 2: 📥 Nhận Starter Kit
-- Tải Starter Kit từ GitHub (có sẵn)
+- 📦 **[Tải Starter Kit tại đây](https://github.com/Biomedical-lab/BETU-traffic-sign-detection)** (có sẵn trên GitHub)
 - Cài thư viện: `pip install -r requirements.txt`
 - Chạy thử: `python count_vehicles.py` → xem code mẫu hoạt động
 
