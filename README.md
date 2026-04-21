@@ -9,7 +9,7 @@
 | 📅 Ngày thi | **29/05/2026** (Thứ Sáu) |
 | ⏰ Hạn nộp bài | **23/05/2026 (23:59)** |
 | 👨‍🏫 Phụ trách | Thầy Nguyễn Ba Duy |
-| 🤝 Phối hợp | Lê Văn Xin |
+| 🤝 Phối hợp | Thầy Lê Văn Xin |
 | 👥 Nhóm | 2 – 3 sinh viên |
 
 ---
