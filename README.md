@@ -337,8 +337,6 @@ if uploaded:
 ## ❓ Hỗ Trợ
 
 - 💬 **[Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)**
-- 👨‍🏫 **Thầy Nguyễn Ba Duy** 
-- 🤝 **Lê Văn Xin** 
 
 ---
 
