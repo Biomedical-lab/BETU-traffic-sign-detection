@@ -185,7 +185,17 @@ streamlit run Demo_App.py
 | 5 | Tốc độ xử lý | **5%** | FPS khi inference qua camera |
 | 6 | Thuyết trình | **10%** | Trình bày rõ ràng, trả lời Q&A tốt |
 
-### 6. Nộp bài
+### 6. 🏆 Giải thưởng
+
+| Giải | Số lượng | Giá trị |
+|------|----------|---------|
+| 🥇 Nhất | 01 | **800.000đ** |
+| 🥈 Nhì | 01 | **600.000đ** |
+| 🥉 Ba | 01 | **400.000đ** |
+| 🎖️ Khuyến khích | 02 | **300.000đ × 2** |
+| | **Tổng: 05 giải** | **2.400.000đ** |
+
+### 7. Nộp bài
 
 > ⚠️ **DEADLINE: 23/05/2026 — 23:59** → Email: **nguyenbaduy@ktkt.edu.vn**
 
@@ -198,7 +208,7 @@ Nhom_X_TenNhom.zip
 └── 📄 README.md          ← Hướng dẫn cài đặt & chạy
 ```
 
-### 7. Quy trình ngày thi (29/05/2026)
+### 8. Quy trình ngày thi (29/05/2026)
 
 | Thời gian | Nội dung |
 |-----------|----------|
