@@ -352,5 +352,3 @@ if uploaded:
 
 **Chúc các nhóm thi tốt! 🎯🚗💨**
 
-*Bình Dương, ngày 20 tháng 04 năm 2026*
-**NGƯỜI PHỤ TRÁCH — Thầy Nguyễn Ba Duy**
