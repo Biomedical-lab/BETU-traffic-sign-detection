@@ -2,15 +2,17 @@
 
 ### Ngày hội Công nghệ Thông tin — BETU 2026
 
-> 📝 **[ĐĂNG KÝ NHÓM TẠI ĐÂY](https://docs.google.com/forms/d/e/1FAIpQLSe-N0hmLiP9FC74LOCokDVVs7C-vysAd_o6tz7FKZl8ub_dDA/viewform)** — ⏰ Hạn đăng ký: **30/04/2026**
+> 📝 **[ĐĂNG KÝ NHÓM TẠI ĐÂY](https://github.com/Biomedical-lab/BETU-traffic-sign-detection)** — ⏰ Hạn đăng ký: **19/05/2026**
 
 | Thông tin | Chi tiết |
 |-----------|----------|
-| 📅 Ngày thi | **29/05/2026** (Thứ Sáu) |
-| ⏰ Hạn nộp bài | **23/05/2026 (23:59)** |
+| 📅 Hạn đăng ký | **19/05/2026** |
+| 📅 Gặp hướng dẫn | **23/05/2026** |
+| 📅 Sơ loại | **08/07 – 10/07/2026** |
+| 📅 Vòng chung kết | **17/07/2026** |
 | 👨‍🏫 Phụ trách | Thầy Nguyễn Ba Duy |
-| 🤝 Phối hợp | Thầy Lê Văn Xin |
-| 👥 Nhóm | 2 – 3 sinh viên |
+| 🤝 Phối hợp | Thầy Lê Văn Xin |
+| 👥 Nhóm | 3 – 4 sinh viên |
 
 ---
 
@@ -43,8 +45,8 @@
 
 ## 🗺️ HÀNH TRÌNH SINH VIÊN: TỪ ĐĂNG KÝ → DỰ THI
 
-### Bước 1: 📝 Đăng ký (trước 30/04)
-- Lập nhóm 2-3 SV → **[đăng ký tại đây](https://docs.google.com/forms/d/e/1FAIpQLSe-N0hmLiP9FC74LOCokDVVs7C-vysAd_o6tz7FKZl8ub_dDA/viewform)**
+### Bước 1: 📝 Đăng ký (trước 19/05)
+- Lập nhóm 3-4 SV → **[đăng ký theo link trên GitHub](https://github.com/Biomedical-lab/BETU-traffic-sign-detection)**
 - Tham gia [Group Zalo cuộc thi](https://zalo.me/g/jbous724jjhkhzn2eogt)
 
 ### Bước 2: 📥 Nhận Starter Kit
@@ -52,27 +54,28 @@
 - Cài thư viện: `pip install -r requirements.txt`
 - Chạy thử: `python count_vehicles.py` → xem code mẫu hoạt động
 
-### Bước 3: 📱 Cài DroidCam (5 phút)
+### Bước 3: 👨‍🏫 Gặp hướng dẫn (23/05/2026)
+- Thầy Duy gặp các nhóm để hướng dẫn thực hiện đề tài
+
+### Bước 4: 📱 Cài DroidCam (5 phút)
 - **Điện thoại**: Cài app **DroidCam** (miễn phí) từ Google Play / App Store
 - **Laptop**: Tải **DroidCam Client** từ [dev47apps.com](https://dev47apps.com)
 - Kết nối cùng WiFi → nhập IP → xong!
 - 📺 [Video hướng dẫn DroidCam (tiếng Việt)](https://www.youtube.com/results?search_query=hướng+dẫn+dùng+DroidCam)
 
-### Bước 4: 💻 Phát triển sản phẩm (2-4 tuần)
+### Bước 5: 💻 Phát triển sản phẩm (23/05 – 08/07)
 - Dựa trên code mẫu `Demo_App.py` → chỉnh sửa, mở rộng
 - Kết nối điện thoại qua DroidCam → test detect xe real-time
 - Làm đẹp giao diện, thêm tính năng sáng tạo
 - Test nhiều lần → hoàn thiện
 
-### Bước 5: 📦 Nộp bài (trước 23/05 – 23:59)
-- Đóng gói: source code + báo cáo PDF (3-5 trang) + video demo (2-3 phút)
-- Nộp file `.zip` qua email: **nguyenbaduy@ktkt.edu.vn**
+### Bước 6: 🔍 Vòng sơ loại (08/07 – 10/07/2026)
+- Sơ loại chọn **8 nhóm** đề tài vào vòng chung kết
 
-### Bước 6: 🏆 Ngày thi 29/05
-1. **Setup**: Mở laptop → kết nối điện thoại (DroidCam/WiFi) → chạy app
-2. **Demo live**: Cầm điện thoại chĩa ra ngoài đường → BGK xem trên máy chiếu
-3. **Demo video**: Chạy app trên video BTC cung cấp
-4. **Thuyết trình + Q&A** → BGK chấm điểm → Trao giải
+### Bước 7: 🏆 Vòng chung kết (17/07/2026)
+1. **Thuyết trình**: Thuyết trình nội dung Đề tài trước Ban Giám khảo
+2. **Demo live**: Chạy thử mô hình/sản phẩm
+3. **Q&A**: Trả lời câu hỏi Ban Giám khảo
 
 ---
 
@@ -147,9 +150,11 @@ streamlit run Demo_App.py
 
 ### 1. Đối tượng & Hình thức
 - **Đối tượng**: Sinh viên Khoa KT-CN, Trường ĐH KT-KT Bình Dương
-- **Nhóm**: 2 – 3 sinh viên/nhóm
-- **Thời gian phát triển**: 4 tuần (26/04 – 23/05/2026)
-- **Ngày thi**: 29/05/2026 – Demo trực tiếp trước Ban giám khảo
+- **Nhóm**: 3 – 4 sinh viên/nhóm
+- **Hạn đăng ký**: 19/05/2026
+- **Gặp hướng dẫn**: 23/05/2026
+- **Sơ loại**: 08/07 – 10/07/2026 (chọn 8 nhóm vào chung kết)
+- **Chung kết**: 17/07/2026 – Thuyết trình + Demo trước Ban Giám khảo
 
 ### 2. Bài toán
 
@@ -176,28 +181,26 @@ streamlit run Demo_App.py
 
 ### 5. Tiêu chí chấm điểm
 
-| STT | Tiêu chí | Trọng số | Mô tả |
-|-----|----------|----------|-------|
-| 1 | Độ chính xác nhận diện | **25%** | Nhận diện đúng loại xe, đếm chính xác |
-| 2 | Kết nối camera & Real-time | **25%** | Kết nối DroidCam thành công, xử lý mượt mà |
-| 3 | Giao diện & Demo | **20%** | UI trực quan, hiển thị bounding box, số đếm |
-| 4 | Sáng tạo & Mở rộng | **15%** | Tracking, phân làn, heatmap, dashboard... |
-| 5 | Tốc độ xử lý | **5%** | FPS khi inference qua camera |
-| 6 | Thuyết trình | **10%** | Trình bày rõ ràng, trả lời Q&A tốt |
+> **50% điểm trình bày** và **50% sản phẩm**
+
+**Hình thức trình bày:**
+- ✔️ Thuyết trình nội dung Đề tài trước Ban Giám khảo
+- ✔️ Chạy thử mô hình/sản phẩm
+- ✔️ Trả lời câu hỏi Ban Giám khảo
 
 ### 6. 🏆 Giải thưởng
 
-| Giải | Số lượng |
-|------|----------|
-| 🥇 Nhất | 01 |
-| 🥈 Nhì | 01 |
-| 🥉 Ba | 01 |
-| 🎖️ Khuyến khích | 02 |
-| **Tổng** | **05 giải** |
+| Giải | Số lượng | Giá trị |
+|------|----------|--------|
+| 🥇 Nhất | 01 | 1.000.000 VNĐ |
+| 🥈 Nhì | 01 | 600.000 VNĐ |
+| 🥉 Ba | 01 | 400.000 VNĐ |
+| 🎖️ Khuyến khích | 01 | 300.000 VNĐ |
+| **Tổng** | **04 giải** |
 
 ### 7. Nộp bài
 
-> ⚠️ **DEADLINE: 23/05/2026 — 23:59** → Email: **nguyenbaduy@ktkt.edu.vn**
+> ⚠️ Sản phẩm phải do nhóm tự phát triển, không sao chép.
 
 ```
 Nhom_X_TenNhom.zip
@@ -208,16 +211,14 @@ Nhom_X_TenNhom.zip
 └── 📄 README.md          ← Hướng dẫn cài đặt & chạy
 ```
 
-### 8. Quy trình ngày thi (29/05/2026)
+### 8. Lộ trình cuộc thi
 
 | Thời gian | Nội dung |
 |-----------|----------|
-| 08:00 – 08:15 | Khai mạc |
-| 08:15 – 08:30 | Setup: kết nối điện thoại (DroidCam), test WiFi |
-| 08:30 – 10:00 | Demo: 7 phút/nhóm + 3 phút Q&A |
-| 10:00 – 10:15 | Giải lao |
-| 10:15 – 10:45 | BGK hội ý chấm điểm |
-| 10:45 – 11:15 | Công bố kết quả, trao giải |
+| Đến 19/05/2026 | 📝 Đăng ký nhóm (3-4 SV) theo link GitHub |
+| 23/05/2026 | 👨‍🏫 Thầy Duy gặp các nhóm để hướng dẫn thực hiện đề tài |
+| 08/07 – 10/07/2026 | 🔍 Sơ loại chọn 8 nhóm đề tài vào vòng chung kết |
+| 17/07/2026 | 🏆 Vòng chung kết |
 
 ---
 
